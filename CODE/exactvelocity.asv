@@ -1,0 +1,14 @@
+function [uex qex]=exactvelocity(nx,ny)
+uex=zeros(ny,nx);
+qex=zeros(ny,nx);
+dy=2/(ny-1);
+y=-1:dy:1;
+for j=1:ny
+    for k=1:nx
+        uex(j,k)=3/2*(1-y(j)^2);
+        qex(j,k)=(-y(j)^3-
+    end
+end
+syms y
+uu=3/2*(1-y^2)
+qex=int(uu);
